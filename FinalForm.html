@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Website</title>
+    <link rel="stylesheet" href="FinalForm.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#survey">Survey</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="mail.pushpamehta2k1@example.com">Mail</a></li>
+                <div><h3>Welcome to our simple single-page website with multiple forms.</h3></div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Login Form -->
+        <section id="login" class="form-section">
+            <h2>Login Form</h2>
+            <form>
+                <label for="role">Select Role:</label>
+                <select id="role" name="role">
+                    <div id="logoptn">
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                    <option value="guest">Guest</option>
+                    </div>
+                </select>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <input type="checkbox" id="remember" name="remember"> Remember Me
+                <button type="submit">Login</button>
+                <button type="reset" style="background-color: #dc3545;">Reset</button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </form>
+        </section>
+
+        <!-- Survey Form -->
+        <section id="survey" class="form-section">
+            <h2>Survey Form</h2>
+            <form id="surveyForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="q1">1. How satisfied are you with the college infrastructure?</label>
+                <select id="q1" name="q1">
+                    <option value="very_satisfied">Very Satisfied</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="dissatisfied">Dissatisfied</option>
+                    <option value="very_dissatisfied">Very Dissatisfied</option>
+                </select>
+    
+                <label for="q2">2. How often do you participate in college events?</label>
+                <div id="q21">
+                    <label><input type="radio" name="q21" value="often">Often</label>
+                    <label><input type="radio" name="q21" value="rarely"> Rarely</label>
+                    <label><input type="radio" name="q21" value="never"> Never</label>
+                </div>
+                
+                <label for="q3">3. What improvements would you like to see in college facilities?</label>
+                <textarea id="q3" name="q3" rows="3"></textarea>
+                
+                <label for="q4">4. How would you rate the quality of education?</label>
+                <input type="number" id="q4" name="q4" min="1" max="10" required>
+                
+                <label for="q5">5. Would you recommend this college to others?</label>
+                <input type="checkbox" id="q5" name="q5" value="yes"> Yes
+                
+                <div class="buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Forget</button>
+                    <button type="button" onclick="rememberForm()">Remember</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Quiz Form -->
+        <section id="quiz" class="form-section">
+            <h2>Quiz Form</h2>
+            <form id="quizForm">
+
+                <!-- Question 1: Radio buttons -->
+                <div class="question">
+                    <p>1. Which of the following is an example of a real-time operating system?</p>
+                    <label><input type="radio" name="q1" value="Windows"> Windows</label>
+                    <label><input type="radio" name="q1" value="Linux"> Linux</label>
+                    <label><input type="radio" name="q1" value="RTOS"> RTOS</label>
+                </div>
+    
+                <!-- Question 2: Checkbox -->
+                <div class="question">
+                    <p>2. Which of the following are open-source operating systems? (Select all that apply)</p>
+                    <label><input type="checkbox" name="q2" value="Linux"> Linux</label>
+                    <label><input type="checkbox" name="q2" value="Windows"> Windows</label>
+                    <label><input type="checkbox" name="q2" value="Ubuntu"> Ubuntu</label>
+                    <label><input type="checkbox" name="q2" value="MacOS"> MacOS</label>
+                </div>
+    
+                <!-- Question 3: Dropdown -->
+                <div class="question">
+                    <p>3. What is the main function of an Operating System?</p>
+                    <select name="q3">
+                        <option value="">Select an option</option>
+                        <option value="Manage hardware">Manage hardware</option>
+                        <option value="Run applications">Run applications</option>
+                        <option value="Both">Both</option>
+                    </select>
+                </div>
+    
+                <!-- Question 4: Text input -->
+                <div class="question">
+                    <p>4. Name any one process scheduling algorithm:</p>
+                    <input type="text" name="q4">
+                </div>
+    
+                <!-- Question 5: Radio buttons -->
+                <div class="question">
+                    <p>5. Which scheduling algorithm is used by Unix?</p>
+                    <label><input type="radio" name="q5" value="FCFS"> FCFS</label>
+                    <label><input type="radio" name="q5" value="Round Robin"> Round Robin</label>
+                    <label><input type="radio" name="q5" value="SJF"> SJF</label>
+                </div>
+    
+                <!-- Remember Me Checkbox -->
+                <div class="question">
+                    <label><input type="checkbox" name="remember"> Remember Me</label>
+                </div>
+    
+                <!-- Buttons -->
+                <button type="submit">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+    
+            </form>
+            
+
+        
+    </main>
+    <!-- Contact Section -->
+        <footer>
+            <h2>Contact Us</h2>
+            <p>Email: mehtapushpa2k1@example.com</p>
+            <p>Phone: +91-8826887596</p>
+            <p>feedback</p>
+            <input type="text" placeholder="Type your feedback here"> 
+            <button>Submit</button>
+        </footer>
+</body>
+</html>
